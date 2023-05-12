@@ -92,11 +92,7 @@ _checkResponse(res) {
 }
 
 const api = new Api({
-    url: "https://mesto.nomoreparties.co/v1/cohort-59",
-    headers: {
-        authorization: "131e7fdb-149f-4853-99c1-5f7c0b1924bf",
-        "Content-Type": "application/json",
-    },
-})
+    baseUrl: `api.domain.veta.nomoredomains.monster`,
+  });
 
 export default api;
