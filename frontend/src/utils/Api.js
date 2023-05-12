@@ -92,7 +92,11 @@ _checkResponse(res) {
 }
 
 const api = new Api({
-    baseUrl: `api.domain.veta.nomoredomains.monster`,
-  });
+    url: "http://api.domain.veta.nomoredomains.monster/",
+    headers: {
+        authorization: "131e7fdb-149f-4853-99c1-5f7c0b1924bf",
+        "Content-Type": "application/json",
+    },
+})
 
 export default api;
