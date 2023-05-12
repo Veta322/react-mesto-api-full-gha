@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 84.201.152.82
+IP 84.201.152.82
 
 Frontend https://domain.veta.nomoredomains.monster
 
