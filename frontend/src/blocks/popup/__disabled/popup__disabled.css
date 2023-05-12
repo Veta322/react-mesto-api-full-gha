@@ -1,0 +1,11 @@
+.popup__disabled {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    background: #FFFFFF;
+    color: rgba(0, 0, 0, 0.15);
+
+}
+
+.popup__disabled:hover {
+    cursor: not-allowed;
+}

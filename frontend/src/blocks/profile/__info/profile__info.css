@@ -1,0 +1,24 @@
+.profile__info {
+  display: grid;
+  grid-template-columns: 18px 1fr 18px;
+  text-align: center;
+  column-gap: 9px;
+  row-gap: 5px;
+  grid-template-areas:
+    ". name edit"
+    ". job .";
+}
+
+@media screen and (min-width: 984px) {
+  .profile__info {
+    max-width: 550px;
+    margin-left: 30px;
+    margin-top: 22px;
+    grid-template-columns: 18px 1fr 26px;
+    column-gap: 19px;
+    row-gap: 9px;
+    grid-template-areas:
+      "name name edit"
+      "job job .";
+  }
+}

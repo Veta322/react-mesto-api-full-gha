@@ -1,0 +1,5 @@
+.element__counter{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}

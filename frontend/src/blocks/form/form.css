@@ -1,0 +1,14 @@
+.form {
+  width: 282px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 984px) {
+  .form {
+    width: 430px;
+    justify-content: center;
+  }
+}

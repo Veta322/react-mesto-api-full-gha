@@ -1,0 +1,13 @@
+.header__authorization {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    padding-top: 5px;
+  }
+  
+  @media screen and (max-width: 475px) {
+    .header__authorization {
+     flex-direction: row;
+     
+    }
+  }
