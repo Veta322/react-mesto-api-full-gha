@@ -90,7 +90,7 @@ _checkResponse(res) {
 }
 
 const api = new Api({
-    url: "http://api.domain.veta.nomoredomains.monster",
+    url: "api.domain.veta.nomoredomains.monster",
     headers: {
         Authorization: `Bearer ${localStorage.getItem('jwt')}`,
         "Content-Type": "application/json",
