@@ -60,7 +60,7 @@ _checkResponse(res) {
     }
 
     likeCard(cardId) {
-        return fetch(this.url +`/cards/likes/${cardId}`, {
+        return fetch(this.url +`/cards/${cardId}/likes`, {
             method: 'PUT',
             headers: this.headers,
         })
@@ -68,7 +68,7 @@ _checkResponse(res) {
     }
 
     removelikeCard(cardId) {
-        return fetch(this.url +`/cards/likes/${cardId}`, {
+        return fetch(this.url +`/cards/${cardId}/likes`, {
             method: 'DELETE',
             headers: this.headers,
         })
