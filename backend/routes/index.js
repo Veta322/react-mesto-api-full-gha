@@ -16,13 +16,6 @@ routes.get('/crash-test', () => {
 });
 
 routes.post('/signin', validationLogin, login);
-
-routes.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
-
 routes.post('/signup', validationCreateUser, createUser);
 
 routes.use(auth);

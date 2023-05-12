@@ -32,6 +32,7 @@ function checkResponse(res) {
     return fetch(`${BASE_URL}/users/me`, {
       method: "GET",
       headers: {
+        "Accept": "application/json",
         "Content-Type": "application/json",
         Authorization: `Bearer ${jwt}`,
       },
