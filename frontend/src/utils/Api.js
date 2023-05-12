@@ -1,9 +1,7 @@
 class Api {
     constructor({url,headers}) {
         this.url = url;
-        this.headers = headers;
-      
-        
+        this.headers = headers;  
     }
 
 _checkResponse(res) {
@@ -94,7 +92,6 @@ _checkResponse(res) {
 const api = new Api({
     url: "http://api.domain.veta.nomoredomains.monster/",
     headers: {
-        authorization: "131e7fdb-149f-4853-99c1-5f7c0b1924bf",
         "Content-Type": "application/json",
     },
 })
