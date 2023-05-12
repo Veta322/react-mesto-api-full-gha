@@ -71,10 +71,10 @@ module.exports.updateProfile = (req, res, next) => {
     { new: true, runValidators: true },
   )
     .then((user) => {
-      if (user === null) {
-        throw new NotFound('Пользователь с данным _id не найден :(');
+      if (!user) {
+        throw new NotFound('Пользователь с указанным _id не найден.');
       }
-      return res.status(200).send({ name: user.name, about: user.about });
+      return res.status(200).send(user);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -93,10 +93,10 @@ module.exports.updateAvatar = (req, res, next) => {
     { new: true, runValidators: true },
   )
     .then((user) => {
-      if (user === null) {
+      if (!user) {
         throw new NotFound('Пользователь с указанным _id не найден.');
       }
-      return res.status(200).send({ avatar: user.avatar });
+      return res.status(200).send(user);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
