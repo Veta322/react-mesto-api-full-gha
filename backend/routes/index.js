@@ -1,6 +1,6 @@
 const { errors } = require('celebrate');
 const routes = require('express').Router();
-const auth = require('../middlewares/auth');
+const { auth } = require('../middlewares/auth');
 const { login, createUser } = require('../controllers/users');
 const { validationLogin, validationCreateUser  } = require('../middlewares/validation');
 const  handleError  = require('../middlewares/handleError');

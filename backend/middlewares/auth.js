@@ -1,11 +1,12 @@
 const jwt = require('jsonwebtoken');
 const Unauthorized = require('../utils/errors/Unauthorized');
 const crypto = require('crypto');
-const randomString = crypto
+
+module.exports.randomString = crypto
   .randomBytes(16)
   .toString('hex');
 
-module.exports = (req, res, next) => {
+module.exports.auth = (req, res, next) => {
   const { authorization } = req.headers;
 
   if (!authorization || !authorization.startsWith('Bearer ')) {
@@ -27,4 +28,4 @@ module.exports = (req, res, next) => {
   return next();
 };
 
-module.exports = { randomString };
+
