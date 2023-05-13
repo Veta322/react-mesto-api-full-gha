@@ -1,7 +1,9 @@
 const jwt = require('jsonwebtoken');
 const Unauthorized = require('../utils/errors/Unauthorized');
-require('dotenv').config();
-const  { JWT_SECRET }  = process.env;
+const crypto = require('crypto');
+const randomString = crypto
+  .randomBytes(16)
+  .toString('hex');
 
 module.exports = (req, res, next) => {
   const { authorization } = req.headers;
@@ -15,7 +17,7 @@ module.exports = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, JWT_SECRET);
+    payload = jwt.verify(token, randomString);
   } catch (err) {
     return next(new Unauthorized('Необходима авторизация'));
   }
@@ -24,3 +26,5 @@ module.exports = (req, res, next) => {
 
   return next();
 };
+
+module.exports = { randomString };
