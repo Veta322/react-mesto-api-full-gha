@@ -23,8 +23,8 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, load }) {
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
-      submit={load ? "Сохранение..." : "Сохранить"}
-    >
+      submit={load ? "Сохранение..." : "Сохранить" }
+      >
       <input
         type="url"
         className="form__item form__item_type_title"
@@ -34,7 +34,6 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, load }) {
         required
         ref={avatarRef}
       />
-      <span className="popup__error popup__error-add-pic"> </span>{" "}
     </PopupWithForm>
   );
 }

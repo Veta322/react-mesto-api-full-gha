@@ -19,15 +19,12 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, load }) {
       imageName,
       imageLink,
     });
-
   }
 
   React.useEffect(() => {
-    setImageName('');
-    setImageLink('');
-}, [isOpen]);
-
-
+    setImageName("");
+    setImageLink("");
+  }, [isOpen]);
 
   return (
     <PopupWithForm
@@ -50,7 +47,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, load }) {
         onChange={handleChangeimageName}
         value={imageName}
       />
-      <span className="popup__error popup__error-add-title"> </span>{" "}
       <input
         type="url"
         className="form__item form__item_type_url"
@@ -61,7 +57,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, load }) {
         onChange={handleChangeimageLink}
         value={imageLink}
       />
-      <span className="popup__error popup__error-add-pic"> </span>{" "}
     </PopupWithForm>
   );
 }

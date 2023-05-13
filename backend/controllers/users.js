@@ -4,6 +4,8 @@ const User = require('../models/user');
 const BadRequest = require('../utils/errors/BadRequest');
 const NotFound = require('../utils/errors/NotFound');
 const Conflict = require('../utils/errors/Conflict');
+require('dotenv').config();
+ const  { JWT_SECRET }  = process.env;
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
@@ -111,7 +113,7 @@ module.exports.login = (req, res, next) => {
   const { email, password } = req.body;
   return User.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, 'very-very-very-secret-key', { expiresIn: '7d' });
+      const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
       res.send({ token });
     })
     .catch((err) => next(err));
@@ -127,3 +129,4 @@ module.exports.getCurrentUser = (req, res, next) => {
     })
     .catch((err) => next(err));
 };
+
